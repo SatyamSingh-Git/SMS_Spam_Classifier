@@ -1,8 +1,11 @@
 import string
 import nltk
-nltk.download('punkt')
 nltk.download('stopwords')
 
+nltk.data.path.append('/path/to/nltk_data')  # Specify a path to save the NLTK data
+
+# Download the punkt_tab tokenizer models
+nltk.download('punkt', download_dir='./nltk_data')  # Use a relative path or home directory
 
 import streamlit as st
 import pickle
